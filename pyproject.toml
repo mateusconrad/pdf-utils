@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-utils"
+version = "0.1.0"
+description = "Utilidades locais e open-source para trabalhar com PDFs (CLI + web)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Mateus" }]
+keywords = ["pdf", "split", "merge", "ocr", "compress", "offline", "local"]
+
+dependencies = [
+    "pypdf>=5.0",
+    "pikepdf>=8.0",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+web = ["flask>=3.0"]
+watermark = ["reportlab>=4.0"]
+tables = ["pdfplumber>=0.11"]
+images = ["pymupdf>=1.24", "Pillow>=10.0"]
+ocr = ["ocrmypdf>=16.0"]
+all = [
+    "flask>=3.0",
+    "reportlab>=4.0",
+    "pdfplumber>=0.11",
+    "pymupdf>=1.24",
+    "Pillow>=10.0",
+    "ocrmypdf>=16.0",
+]
+
+[project.scripts]
+pdfutils = "pdfutils.cli:main"
+
+[tool.setuptools]
+packages = ["pdfutils"]

@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Testes / cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Saídas e artefatos de exemplo
+*_paginas/
+decrypted_*.pdf
+pdf_hash.txt
+
+# PDFs de amostra pesados (não versionados para manter o repo leve)
+Pdf Splitter/textosAlunos.pdf
+pdf Cracker/arquivo.pdf
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

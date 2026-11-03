@@ -1,0 +1,23 @@
+# Núcleo (obrigatório)
+pypdf>=5.0
+pikepdf>=8.0
+
+# Recuperação de senha / progresso
+tqdm>=4.66
+
+# Web
+flask>=3.0
+
+# Opcionais por funcionalidade:
+#   marca d'água / numeração
+reportlab>=4.0
+#   extração de tabelas
+pdfplumber>=0.11
+#   PDF <-> imagens, extração de imagens, flatten
+pymupdf>=1.24
+Pillow>=10.0
+#   OCR (também requer Tesseract e Ghostscript instalados no sistema)
+# ocrmypdf>=16.0
+
+# Compressão com melhor taxa usa Ghostscript, se disponível no PATH
+# (gswin64c / gs). Sem ele, cai no modo lossless do pikepdf.
